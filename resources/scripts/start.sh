@@ -10,6 +10,11 @@ echo -e "\n${goan_version}\n"
 #Set NGINX basic authentication
 nginx_basic_auth
 
+# SETUP HTML FOLDER FOR NGINX
+if [[ ! -d "/var/www/html" ]]; then
+    mkdir /var/www/html
+fi
+
 # BEGIN PROXY LOGS
 goan_proxy_config="/goaccess-config/goaccess_proxy.conf"
 cp /goaccess-config/goaccess.conf ${goan_proxy_config}

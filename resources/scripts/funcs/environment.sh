@@ -2,7 +2,7 @@
 
 #Exclude IPs
 function exclude_ips() {
-    echo -e "\nEXCLUDE_IPS"
+    echo -e "\nEXCLUDE IPS"
     echo "-------------------------------"    
     if [[ -z "${EXCLUDE_IPS}" ]]
     then
@@ -110,6 +110,7 @@ function load_proxy_logs() {
     then
         echo "True"
     else
+        echo "False"
         if [[ -d "${1}" && -x "${1}" ]];
         then
             count=`ls -1 ${1}/proxy-host-*_access.log*.gz 2> /dev/null | wc -l`
