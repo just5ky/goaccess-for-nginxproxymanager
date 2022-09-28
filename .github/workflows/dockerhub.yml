@@ -4,6 +4,7 @@ on:
   #schedule:
   #  - cron: '50 15 * * *'  #Change this to when you want automatic builds
   workflow_dispatch:
+  push:
 
 env:
   REGISTRY: docker.io
